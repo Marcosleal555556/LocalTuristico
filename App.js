@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, Image } from "react-native";
+import TouristLocation from "./src/components/TouristLocation";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <TouristLocation name="Neo Química Arena" />
+      <TouristLocation address="Av. Miguel Ignácio Curi, 111 - Vila Carmosina, São Paulo - SP, 08295-005" />
+      <TouristLocation imageUri='./src/Imagens/NeoQuimica.jpeg'>My App</TouristLocation>
+      <TouristLocation description="Descrição" />
     </View>
   );
 }
@@ -13,8 +16,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
